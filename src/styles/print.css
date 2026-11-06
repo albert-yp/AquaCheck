@@ -1,0 +1,64 @@
+/* Aturan cetak surat; tampilan layar tetap memakai tema Material UI. */
+@page {
+  size: A4;
+  margin: 20mm;
+}
+
+@media print {
+  html,
+  body,
+  #root {
+    height: auto;
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  /* Navigasi dan kontrol tidak ikut tercetak. */
+  .app-header,
+  .app-sidebar,
+  .app-toolbar-spacer,
+  .no-print,
+  button {
+    display: none !important;
+  }
+
+  /* Layout utama memakai seluruh lebar tanpa ruang sidebar. */
+  .app-layout {
+    display: block !important;
+    min-height: 0 !important;
+  }
+
+  .app-main {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .print-container {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  .letter-sheet {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  .letter-sheet * {
+    color: #111827 !important;
+    box-shadow: none !important;
+  }
+
+  .letter-statement {
+    background: #ffffff !important;
+    border-color: #6b7280 !important;
+  }
+
+  /* Blok identitas dan nama pemeriksa tidak terpotong antarhalaman. */
+  .letter-avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

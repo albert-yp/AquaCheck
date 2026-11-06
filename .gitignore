@@ -1,0 +1,36 @@
+
+
+# Dependency dan hasil build
+node_modules/
+/dist/
+/dist-ssr/
+
+# Cache dan laporan pengujian
+.vite/
+.cache/
+.eslintcache
+/coverage/
+/playwright-report/
+/test-results/
+
+# Log
+logs/
+*.log
+*.log.*
+
+# Konfigurasi lingkungan lokal; contoh tetap disertakan
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# File sementara editor dan sistem operasi
+.idea/
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
